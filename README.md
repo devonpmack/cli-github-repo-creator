@@ -13,12 +13,14 @@ Simply run the command `git create` in a LOCAL git repository and it will instan
 > ```
 > Reload your terminal and typing `git create` will now run the script.
 
-3. Next, generate a personal access token [here]
+3. Run `chmod +x git-create` in the directory with the script
+
+4. Next, generate a personal access token [here]
 (https://github.com/settings/tokens). Give it access to the repo category.
 
-4. Open the script you downloaded and replace `ACCESS_TOKEN_HERE` with the token you just generated.
+5. Open the script you downloaded and replace `ACCESS_TOKEN_HERE` with the token you just generated.
 
-5. Now run the command `git config --global user.name <YOUR_USERNAME>` to register your github username.
+6. Now run the command `git config --global user.name <YOUR_USERNAME>` to register your github username.
 
 The script should now be fully set up
 
