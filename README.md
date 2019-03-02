@@ -1,5 +1,5 @@
 # CLI GitHub Repository Creator
-Simply run the command `git create` in an initialized git repository and it will instantly create a GitHub repository with your files in it.
+Simply run the command `git create` in a LOCAL git repository and it will instantly create a GitHub repository with your files in it.
 
 # Installation and Setup
 1. First download the "git-create" shell script.
@@ -18,7 +18,7 @@ Simply run the command `git create` in an initialized git repository and it will
 
 4. Open the script you downloaded and replace `ACCESS_TOKEN_HERE` with the token you just generated.
 
-5. Now run the command `git config user.name <YOUR_USERNAME>` to register your github username.
+5. Now run the command `git config --global user.name <YOUR_USERNAME>` to register your github username.
 
 The script should now be fully set up
 
