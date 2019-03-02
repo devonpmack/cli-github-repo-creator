@@ -17,7 +17,7 @@
 
 5. Now run the command `git config user.name <YOUR_USERNAME>` to register your github username.
 
-6. The script should now be fully set up
+The script should now be fully set up
 
 To use it, first initialise a github repository using git init. Make at least one commit. Next, while inside your project directory, run the command `git create` to activate the script.
 
