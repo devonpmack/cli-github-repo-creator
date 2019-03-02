@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# originally made by https://gist.github.com/robwierzbowski/5430952/
+# Updated to work in 2019 by devonpmack
+
+# Create and push to a new github repo from the command line.  
+
+# generate a personal access token here: https://github.com/settings/tokens
+GTOKEN="ACCESS_TOKEN_HERE"
+# Gather constant vars
+CURRENTDIR=${PWD##*/}
+# must run git config user.name "devonpmack"
+GITHUBUSER=$(git config user.name)
+DESCRIPTION=""
+# Get user input
+echo "New repo name (enter for ${PWD##*/}):"
+read REPONAME
+echo "Git Username (enter for ${GITHUBUSER}):"
+read USER
+echo "Private? (y/n)"
+read PRIVATE
+
+if [ "$PRIVATE" = "y" ]; then
+   PRIVATE="true"
+else
+   PRIVATE="false"
+fi
+
+echo "Creating repository..."
+# Curl some json to the github API oh damn we so fancy
+curl -u ${USER:-${GITHUBUSER}:${GTOKEN}} https://api.github.com/user/repos -d "{\"name\": \"${REPONAME:-${CURRENTDIR}}\", \"description\": \"${DESCRIPTION}\", \"private\": ${PRIVATE}, \"has_issues\": true, \"has_downloads\": true, \"has_wiki\": false}"
+
+# Set the freshly created repo to the origin and push
+# You'll need to have added your public key to your github account
+
+if [ $(git remote)="origin" ]; then
+   git remote rm origin
+fi
+
+git remote add origin git@github.com:${USER:-${GITHUBUSER}}/${REPONAME:-${CURRENTDIR}}.git
+git push --set-upstream origin master
+echo Link to repo: https://github.com/${USER:-${GITHUBUSER}}/${REPONAME:-${CURRENTDIR}}
