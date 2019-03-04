@@ -1,5 +1,5 @@
 # CLI GitHub Repository Creator
-Simply run the command `git create` in a LOCAL git repository and it will instantly create a GitHub repository with your files in it.
+Simply run the command `git create` in a LOCAL git repository and it will instantly create and push a GitHub repository with your files in it.
 
 # Installation and Setup
 1. First download the "git-create" shell script.
