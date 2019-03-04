@@ -24,7 +24,7 @@ Simply run the command `git create` in a LOCAL git repository and it will instan
 
 The script should now be fully set up
 
-To use it, first initialise a github repository using git init. Make at least one commit. Next, while inside your project directory, run the command `git create` to activate the script.
+To use it, first initialise a github repository using `git init`. Make at least one commit. Next, while inside your project directory, run the command `git create` to activate the script.
 
 It will ask you for the repository name, your github username, and whether to make the repository private. Then it will create your github repository and push your local files to it!
 
