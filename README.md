@@ -4,12 +4,15 @@ Simply run the command `git create` in a LOCAL git repository and it will instan
 # Installation and Setup
 1. First download the "git-create" shell script.
 
-2. To add the script to your command line:
+2. To add the script to your command line make a folder ~/bin and run the following command to add it to your path. It will add the path to ~/.bash_profile or ~/.zshrc:
 
-> Make a folder ~/bin and copy the script into it. Then edit your ~/.bash_profile (if using zsh then ~/.zshrc) and add these lines:
+> ZSH
 > ```
-> PATH=$PATH:~/bin
-> export PATH
+> echo 'export PATH="$PATH:~/bin"' >> ~/.zshrc
+> ```
+> BASH
+> ```
+> echo 'export PATH="$PATH:~/bin"' >> ~/.bash_profile
 > ```
 > Reload your terminal and typing `git create` will now run the script.
 
