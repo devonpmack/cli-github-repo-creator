@@ -18,8 +18,7 @@ Simply run the command `git create` in a LOCAL git repository and it will instan
 
 3. Run `chmod +x git-create` in the directory with the script
 
-4. Next, generate a personal access token [here]
-(https://github.com/settings/tokens). Give it access to the repo category.
+4. Next, generate a personal access token [here](https://github.com/settings/tokens). Give it access to the repo category.
 
 5. Open the script you downloaded and replace `ACCESS_TOKEN_HERE` with the token you just generated.
 
