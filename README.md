@@ -8,11 +8,11 @@ Simply run the command `git create` in a LOCAL git repository and it will instan
 
 > ZSH
 > ```
-> echo 'export PATH="$PATH:~/bin"' >> ~/.zshrc
+> echo 'export PATH=$PATH:~/bin' >> ~/.zshrc
 > ```
 > BASH
 > ```
-> echo 'export PATH="$PATH:~/bin"' >> ~/.bash_profile
+> echo 'export PATH=$PATH:~/bin' >> ~/.bash_profile
 > ```
 > Reload your terminal and typing `git create` will now run the script.
 
